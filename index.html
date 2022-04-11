@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Register Blank</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="heading">
+                <h3>Example form</h3>
+                <span>All:  <b id="all" >15</b> </span>
+                <span>Need:  <b id="need" >12</b> </span>
+                <span>Success:  <b id="success" >8</b>/12</span>
+                <span>Error:  <b id="error" >4</b>/12</span>
+            </div>
+            <div class="regInfo">
+                <span id="all" data-info="all"></span>
+                <span data-info="need"></span>
+                <span data-info="success"></span>
+                <span data-info="error"></span>
+            </div>
+            <form>
+                <div class="box">
+                    <span>Name</span>
+                    <input type="text" id="name" name="name" class="blue" >
+                    <label for="name">Need to fill</label>
+                </div>
+                <div class="box">
+                    <span>Age</span>
+                    <input type="text" id="age" name="age" class="blue" >
+                    <label for="age">Need to fill</label>
+                </div>
+                <div class="box">
+                    <span>Surname</span>
+                    <input type="text" name="surname">
+                </div>
+               <div class="box">
+                    <span>About You</span>
+                    <input type="text" id="userInfo" name="userInfo" class="blue" >
+                    <label for="userInfo">Need to fill</label>
+               </div>
+                <div class="box">
+                    <span>Email adress</span>
+                    <input type="email" id="email" name="email" class="blue" >
+                    <label for="email">Need to fill</label>
+                </div>
+                <div class="box">
+                    <span>What is JavaScript?</span>
+                    <input type="text" id="js" name="js" class="blue" >
+                    <label for="js">Need to fill</label>
+                </div>
+                <div class="box">
+                    <span>Phone Number</span>
+                    <input type="tel" name="phone">
+                </div>
+                <div class="box">
+                    <span>What is HTML?</span>
+                    <input type="text" id="html" name="html" class="blue" >
+                    <label for="email">Need to fill</label>
+                </div>
+                <div class="box">
+                    <span>Your Mom's name</span>
+                    <input type="text" name="name">
+                </div>
+                <div class="box">
+                    <span>What is CSS</span>
+                    <input type="text" id="css" name="css" class="blue" >
+                    <label for="css">Need to fill</label>
+                </div>
+                <div class="box">
+                    <span>Pap's name</span>
+                    <input type="text" name="name">
+                </div>
+                <div class="box">
+                    <span>Favourite Car</span>
+                    <input type="text" name="favCar">
+                </div>
+                <button>Save changes</button>
+            </form>
+        </div>
+        <div id="loading"></div>
+        <div class="blur"></div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
