@@ -56,8 +56,15 @@ forms.onsubmit = (event) => {
             if(inp.nextSibling.nextSibling) {
                 arr.push('invalid')
                 inp.classList.add('invalid')
+                setTimeout(() => {
+                    inp.classList.remove('invalid')
+                }, 1000);
                 inp.nextSibling.nextSibling.innerHTML = "Please enter your email adress"
                 inp.nextSibling.nextSibling.style.color = "red"
+                setTimeout(() => {
+                    inp.nextSibling.nextSibling.style.color = "black"
+                    inp.nextSibling.nextSibling.innerHTML = "Need to fill"
+                }, 1000);
             }
         }
     })
