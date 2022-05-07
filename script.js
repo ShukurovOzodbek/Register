@@ -45,6 +45,8 @@ allFields.innerHTML = inputs.length
 needFields.innerHTML = requireFields.length
 
 let isLoading = false
+let img = document.querySelectorAll('img')
+let bt = document.querySelector('button')
 
 forms.onsubmit = (event) => {
     event.preventDefault()
@@ -53,17 +55,25 @@ forms.onsubmit = (event) => {
 
     inputs.forEach(inp => {
         if(inp.classList.contains('invalid') || inp.value.length == 0) {
-            if(inp.nextSibling.nextSibling) {
-                arr.push('invalid')
-                inp.classList.add('invalid')
-                setTimeout(() => {
+           if(inp.nextSibling.nextSibling) {
+              arr.push('invalid')
+              inp.classList.add('invalid')
+              setTimeout(() => {
                     inp.classList.remove('invalid')
                 }, 1000);
-                inp.nextSibling.nextSibling.innerHTML = "Please enter your email adress"
-                inp.nextSibling.nextSibling.style.color = "red"
+                inp.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML = `Please enter ${inp.previousSibling.previousSibling.innerHTML} `
+                inp.nextSibling.nextSibling.nextSibling.nextSibling.style.color = "red"
+                bt.className = 'bt'
+                img.forEach(element => {
+                  element.style.opacity = '1'
+                });
                 setTimeout(() => {
-                    inp.nextSibling.nextSibling.style.color = "black"
-                    inp.nextSibling.nextSibling.innerHTML = "Need to fill"
+                  inp.nextSibling.nextSibling.nextSibling.nextSibling.style.color = "black"
+                  inp.nextSibling.nextSibling.nextSibling.nextSibling.innerHTML = "Need to fill"
+                  bt.className = ''
+                  img.forEach(element => {
+                     element.style.opacity = '0'
+                   });
                 }, 1000);
             }
         }
@@ -102,7 +112,7 @@ function submit() {
     })
 }
 const blur = document.querySelector('.blur')
-const loading =document.querySelector('#loading')
+const loading = document.querySelector('#loading')
 
 function LoadingWathcer() {
     if(isLoading) {
